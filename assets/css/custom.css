@@ -140,6 +140,8 @@
 		.whitebgServices {
 			background-color: white;
 			opacity: 0.8;
+			-webkit-border-radius: 10px;
+			-moz-border-radius: 10px;
 			border-radius: 10px;
 			padding: 20px;
 			margin: 0px;
@@ -192,6 +194,8 @@
 	.whitebg {
 		background-color: white;
 		opacity: 0.9;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
 		border-radius: 20px;
 	}
 
@@ -249,5 +253,16 @@
 			position: relative;
 			top: -1px;
 			height: 30px;
+		}
+	}
+
+	@media (max-width: 992px){
+		.logoImg {
+			position: relative;
+			top: -1px;
+			height: 30px;
+		}
+		.newsletterDiv {
+		  	border-radius: 20px;
 		}
 	}
