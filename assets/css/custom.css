@@ -359,6 +359,16 @@
 	left: 1px;
 }
 
+.btn-pacificano {
+	background-color: #8DCBB4; 
+	color: #222E41; 
+}
+
+.btn-pacificano:hover {
+	background-color: #00A67B;
+	color: #222E41; 
+}
+
 
 
 /* FORM */
@@ -399,9 +409,10 @@ textarea {
 .post-comments-badge a {
 	display: table-cell;
 	vertical-align: middle;
-	color: white;
+	color: #222E41;
 	font-size: 20px;
 	line-height: 20px;
+	text-decoration: none;
 }
 
 .post-comments-badge i.fa {
@@ -413,7 +424,6 @@ textarea {
 
 .post-comments-badge:hover {
 	background-color: #00A67B;
-	color: #222E41;
 }
 
 #comments h3 {
