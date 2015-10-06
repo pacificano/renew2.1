@@ -3,12 +3,19 @@
 	Template Name: Home Page
  */
 
+// Custom Fields
+$homepage_tag			= get_field('homepage_tag');
+$homepage_description	= get_field('homepage_description');
+$header_feature_image	= get_field('header_feature_image');
+$mailing_list_text		= get_field('mailing_list_text');
+
+
 get_header(); ?>
 
 	
 
 	<!-- HERO -->
-    <section id="hero" class="container-fluid landingDiv splashDiv">
+    <section id="hero" class="container-fluid landingDiv splashDiv" style="background-image: url('<?php echo $header_feature_image['url']; ?>');">
 
     	<article>
 
@@ -18,8 +25,8 @@ get_header(); ?>
     				
     				<div class="col-md-6 white landingDivLeft">
 
-    					<h1 class="dropShadow">A Fresh<br />Approach to<br />Web Development</h1>
-						<h3 class="dropShadow">Computers and servers used to host and develop websites are a major contributor of carbon emissions. All our web development packages are 100% carbon neutral, with 5-star customer service, and a percentage of proceeds donated to help support Pacific Ocean conservation.</h3>
+    					<h1 class="dropShadow"><?php echo $homepage_tag;  ?></h1>
+						<h3 class="dropShadow"><?php echo $homepage_description; ?></h3>
 
     				</div><!-- #landingDivLeft -->
 
@@ -28,7 +35,7 @@ get_header(); ?>
 
 		    			<form action="http://pacificano.us11.list-manage.com/subscribe/post?u=9e3e430d9b1934531b447d0aa&amp;id=5658fa2591" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
 
-							<p class="lead">Find out how to build an ecofriendly online business.<br/><span>Subscribe to our mailing list.</span></p>
+							<p class="lead"><?php echo $mailing_list_text; ?><br/><span>Subscribe to our mailing list.</span></p>
 
 							<label for="mce-FNAME">Your first name</label>
 							<input type="text" value="" name="FNAME" class="newsletterName" id="mce-FNAME">
