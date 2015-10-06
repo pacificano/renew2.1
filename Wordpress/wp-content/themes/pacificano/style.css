@@ -437,7 +437,6 @@ object {
 
 	/* HERO DIV */
 		.landingDiv {
-			background-image: url("assets/img/backgrounds/splash-oceanRocks.JPG");
 			background-size: cover;
 			background-position: center;
 			padding-top: 0px;
