@@ -62,7 +62,7 @@
 
 		    			</button><!-- button -->
 
-		    			<a class="navbar-brand" href="index.html"><img src="assets/img/logo.svg" class="logoImg" alt="Pacificano"></a>
+		    			<a class="navbar-brand" href="index.html"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.svg" class="logoImg" alt="Pacificano"></a>
 
 					</div><!-- .navbar-header -->
 
@@ -72,7 +72,8 @@
 
 							'theme_location' => 'primary',
 							'container' => 'nav',
-							'container_class' => 'navbar-collpse collapse',
+							'container_class' => 'navbar-collapse collapse',
+							'container_id' => 'navbar',
 							'menu_class' => 'nav navbar-nav navbar-right'
 
 						));
