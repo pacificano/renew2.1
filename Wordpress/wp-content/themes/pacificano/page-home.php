@@ -9,6 +9,9 @@ $homepage_description	= get_field('homepage_description');
 $header_feature_image	= get_field('header_feature_image');
 $mailing_list_text		= get_field('mailing_list_text');
 
+$about_us_body			= get_field('about_us_body');
+
+
 
 get_header(); ?>
 
@@ -80,11 +83,7 @@ get_header(); ?>
 	    			
 	    			<h2>Our Services</h2>
 
-					<p class="lead">Pacificano is an eco-friendly web development company based in Sydney, Australia. As a small, friendly company we can offer you a flexible, personalised service that big development businesses can't match, without compromising on price or reliability.</p>
-
-					<p class="lead"><a href="http://www.greenpeace.org/usa/wp-content/uploads/legacy/Global/usa/planet3/PDFs/2015ClickingClean.pdf">Up to 5% of the world’s carbon emissions are created by equipment used for hosting web servers</a>. With some estimates predicting this to rise to 12% by 2017, we'd like to do our part and help counter this trend by offering individuals and companies a carbon-positive web development service. We carefully <a href="http://www.epa.vic.gov.au/AGC/home.html">calculate the carbon emissions of our whole business</a> and ensure that significantly more than this is absorbed by <a href="http://www.greenfleet.com.au/">native forests planted by Greenfleet Australia</a>. We also donate a percentage of our profits to the <a href="http://www.marineconservation.org.au/pages/great-barrier-reef.html">Australian Marine Conservation Society</a> who help protect the Great Barrier Reef.</p>
-
-					<p class="lead">You can be confident when you use our services that you are getting ultra-reliable and high-quality web apps and services, while also helping to save the environment.</p>
+					<p class="lead"><?php echo $about_us_body; ?></p>
 
 	    		</div>
 
