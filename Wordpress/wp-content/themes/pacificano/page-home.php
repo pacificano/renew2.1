@@ -11,8 +11,6 @@ $mailing_list_text		= get_field('mailing_list_text');
 
 $about_us_body			= get_field('about_us_body');
 
-
-
 get_header(); ?>
 
 	
@@ -104,59 +102,30 @@ get_header(); ?>
 	    		
 	    		<div class="row">
 	    			
-	    			<div class="col-md-4">
-	    				<div class="whitebgServices center marginBottom">
-	    					<a href="hosting.html">
-	    					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/01-hosting.png">
-		    				<h2>Hosting</h2></a>
-		    				<p>We offer a range of affordable and reliable hosting services.</p>
-	    				</div>
-	    			</div>
+	    			<?php $loop = new WP_Query( array( 'post_type' => 'services_offered', 'orderby' => 'post_id', 'order' => 'ASC' ) ); ?>
 
-	    			<div class="col-md-4">
-	    				<div class="whitebgServices center marginBottom">
-	    					<a href="domains.html">
-	    					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/02-domains.png">
-		    				<h2>Domains</h2></a>
-		    				<p>We can help you secure and register your business's domain name.</p>
-	    				</div>
-	    			</div>
+					<?php while( $loop->have_posts() ) : $loop->the_post(); ?>
 
-	    			<div class="col-md-4">
-	    				<div class="whitebgServices center marginBottom">
-	    					<a href="wordpress.html">
-	    					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/03-wordpress.png">
-		    				<h2>Wordpress</h2></a>
-		    				<p>We are experts in building Wordpress CMS's and blogs, tailored just for you.</p>
-	    				</div>
-	    			</div>
+						<div class="col-md-4">
+		    				<div class="whitebgServices center marginBottom">
 
-	    			<div class="col-md-4">
-	    				<div class="whitebgServices center marginBottom">
-	    					<a href="mobile.html">
-	    					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/04-mobile.png">
-		    				<h2>Mobile/Web Apps</h2></a>
-		    				<p>Looking to bring your business to a mobile audience? We can help you.</p>
-	    				</div>
-	    			</div>
+			    				<?php 
 
-	    			<div class="col-md-4">
-	    				<div class="whitebgServices center marginBottom">
-	    					<a href="javascript.html">
-	    					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/05-javascript.png">
-		    				<h2>Javascript</h2></a>
-		    				<p>We absolutely adore Javascript and would love to help you with your project.</p>
-	    				</div>
-	    			</div>
+			    				$service_link = get_field('service_link');
 
-	    			<div class="col-md-4">
-	    				<div class="whitebgServices center marginBottom">
-	    					<a href="seo.html">
-	    					<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/06-search.png">
-		    				<h2>SEO</h2></a>
-		    				<p>We can give you advice and tips on how to improve your business's web ranking.</p>
-	    				</div>
-	    			</div>
+			    				if ( !empty($service_link) ) : ?>
+			    					<a href="<?php the_field('service_link'); ?>">
+			    				<?php endif; ?>
+
+		    					<?php $service_image = get_field('service_image'); ?>
+								<img src="<?php echo $service_image['url']; ?>" alt="<?php echo $service_image['alt']; ?>">
+			    				<h2><?php the_title(); ?></h2></a>
+			    				<p><?php the_field('service_description'); ?></p>
+
+		    				</div>
+		    			</div>
+
+					<?php endwhile; wp_reset_query(); ?>
 
 	    		</div><!-- .row -->
 
