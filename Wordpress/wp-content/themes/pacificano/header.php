@@ -63,7 +63,7 @@
 
 		    			</button><!-- button -->
 
-		    			<a class="navbar-brand" href="index.html"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.svg" class="logoImg" alt="Pacificano"></a>
+		    			<a class="navbar-brand" href="<?php bloginfo('wpurl'); ?>"><img src="<?php bloginfo('stylesheet_directory'); ?>/assets/img/logo.svg" class="logoImg" alt="Pacificano"></a>
 
 					</div><!-- .navbar-header -->
 
