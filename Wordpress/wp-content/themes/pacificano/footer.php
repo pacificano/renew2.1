@@ -9,6 +9,12 @@
  * @package Pacificano_v1
  */
 
+// Custom Fields
+$contact_description			= get_field('contact_description');
+$email_address					= get_field('email_address');
+$twitter_handle					= get_field('twitter_handle');
+$github_address					= get_field('github_address');
+
 ?>
 
 <?php wp_footer(); ?>
@@ -25,11 +31,11 @@
 	    			<div class="col-md-6 white contactDivLeft">
 	    				
 	    				<h1 class="dropShadow">Contact Us</h1>
-						<h3 class="dropShadow">Feel free to email, tweet, or view our code.</h3>
+						<h3 class="dropShadow"><?php echo $contact_description; ?></h3>
 
-						<p class="lead dropShadow"><i class="fa fa-envelope"></i> <a href="mailto:hello@pacificano.com">hello@pacificano.com</a></p>
-						<p class="lead dropShadow"><i class="fa fa-twitter"></i> <a href="http://www.twitter.com/pacificano_au">http://www.twitter.com/pacificano_au</a></p>
-						<p class="lead dropShadow"><i class="fa fa-github"></i> <a href="http://www.github.com/pacificano">http://www.github.com/pacificano</a></p>
+						<p class="lead dropShadow"><i class="fa fa-envelope"></i> <a href="mailto:<?php echo $email_address; ?>"><?php echo $email_address; ?></a></p>
+						<p class="lead dropShadow"><i class="fa fa-twitter"></i> <a href="http://www.twitter.com/<?php echo $twitter_handle; ?>">http://www.twitter.com/<?php echo $twitter_handle; ?></a></p>
+						<p class="lead dropShadow"><i class="fa fa-github"></i> <a href="http://www.github.com/<?php echo $github_address; ?>">http://www.github.com/<?php echo $github_address; ?></a></p>
 
 	    			</div>
 
