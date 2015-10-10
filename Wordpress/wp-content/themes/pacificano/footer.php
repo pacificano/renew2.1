@@ -10,10 +10,10 @@
  */
 
 // Custom Fields
-$contact_description			= get_field('contact_description');
-$email_address					= get_field('email_address');
-$twitter_handle					= get_field('twitter_handle');
-$github_address					= get_field('github_address');
+$contact_description			= get_field('contact_description', 7);
+$email_address					= get_field('email_address', 7);
+$twitter_handle					= get_field('twitter_handle', 7);
+$github_address					= get_field('github_address', 7);
 
 ?>
 
