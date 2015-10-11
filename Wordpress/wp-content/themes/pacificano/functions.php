@@ -153,6 +153,8 @@ require get_template_directory() . '/inc/jetpack.php';
 
 
 
+// TINY MCE CUSTOM CODE
+
 // Callback function to insert 'styleselect' into the $buttons array
 function my_mce_buttons_2( $buttons ) {
 	array_unshift( $buttons, 'styleselect' );
@@ -185,3 +187,13 @@ function my_mce_before_init_insert_formats( $init_array ) {
 } 
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );  
+
+
+
+// EXCERPT MORE TEXT LINK
+
+function new_excerpt_more($more) {
+	global $post;
+	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
