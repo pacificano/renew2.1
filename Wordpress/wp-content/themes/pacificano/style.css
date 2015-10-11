@@ -538,6 +538,10 @@ object {
 		font-size: 450%;
 	}
 
+	h1 small {
+	color: white;
+	}
+
 	hr {
 		padding-bottom: 20px;
 	}
@@ -623,6 +627,9 @@ object {
 
 	.feature-image h1 {
 		margin: 90px 0 30px;
+	}
+	.search-image h1 {
+		color: white;
 	}
 
 
@@ -813,6 +820,22 @@ textarea {
 	padding: 20px 0 0;
 	border-top: solid 1px #eee;
 }
+
+
+
+/* WORDPRESS COMMENT STYLES */
+	#comments footer {
+		background: none;
+		color: inherit;
+	}
+
+	#comments footer a {
+		color: inherit;
+	}
+
+	#comments .comment-metadata {
+		margin: 10px 0 0;
+	}
 
 
 
