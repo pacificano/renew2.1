@@ -104,8 +104,8 @@ function pacificano_widgets_init() {
 		'description'   => '',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 }
 add_action( 'widgets_init', 'pacificano_widgets_init' );
@@ -194,6 +194,6 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 
 function new_excerpt_more($more) {
 	global $post;
-	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;';
+	return '... <a class="moretag" href="'. get_permalink($post->ID) . '"> continue reading &raquo;</a>';
 }
 add_filter('excerpt_more', 'new_excerpt_more');
