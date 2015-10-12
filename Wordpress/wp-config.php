@@ -18,6 +18,8 @@
  * @package WordPress
  */
 
+
+
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define('DB_NAME', 'pacificano');
@@ -78,6 +80,9 @@ $table_prefix  = 'pac_';
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
 define('WP_DEBUG', false);
+
+// CONTACT FORM 7 changes
+define ('WPCF7_AUTOP', false); // Stop adding p tags
 
 /* That's all, stop editing! Happy blogging. */
 
