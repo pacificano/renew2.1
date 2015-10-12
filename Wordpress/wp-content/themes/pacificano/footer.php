@@ -10,10 +10,10 @@
  */
 
 // Custom Fields
-$contact_description			= get_field('contact_description', 7);
-$email_address					= get_field('email_address', 7);
-$twitter_handle					= get_field('twitter_handle', 7);
-$github_address					= get_field('github_address', 7);
+$contact_description			= get_field('contact_description', 70);
+$email_address					= get_field('email_address', 70);
+$twitter_handle					= get_field('twitter_handle', 70);
+$github_address					= get_field('github_address', 70);
 
 ?>
 
@@ -42,35 +42,11 @@ $github_address					= get_field('github_address', 7);
 	    			<!-- Contact Form -->
 		    		<div class="col-md-3 col-md-offset-3 newsletterDiv contactDivRight">
 
-	    				<?php 
+						<div id="contactForm">
+							
+							<?php echo do_shortcode( '[contact-form-7 id="68" title="Primary Contact Form"]' ); ?>
 
-							echo $result;
-
-						?>
-
-		    			<form method="post" action="22.php#contactForm" id="contactForm">
-
-	                        <p class="lead">Having a question for us?<br/><span>Shoot us a message now!</span></p>
-
-	                        <label for="name">Your first name</label>
-	                        <input type="text" name="name" class="contactName" value="">
-
-	                        <label for="email">Your email address</label>
-	                        <input type="email" name="email" class="contactName" value=""> 
-
-	                        <label for="query">How can we help you?</label>
-	                        <select name="query">
-	                            <option>Just saying 'hi'</option>
-	                            <option>A question about your services</option>
-	                            <option>I'd like to hire you</option>
-	                        </select>
-
-	                        <label for="comment">Your message</label>
-	                        <textarea name="comment" cols="40" rows="5"></textarea> 
-
-	                        <input type="submit" name="submit" value="Send" class="contactButton">
-
-	                    </form>
+						</div>
 
 		    		</div>
 
