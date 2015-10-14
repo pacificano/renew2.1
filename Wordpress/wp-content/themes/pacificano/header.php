@@ -69,7 +69,9 @@
 
 					<?php 
 
-						wp_nav_menu( array(
+						if (is_front_page()) {
+							
+							wp_nav_menu( array(
 
 							'theme_location' => 'primary',
 							'container' => 'nav',
@@ -77,8 +79,22 @@
 							'container_id' => 'navbar',
 							'menu_class' => 'nav navbar-nav navbar-right'
 
-						));
+							));
 
+						} else {
+							
+							wp_nav_menu( array(
+
+							'theme_location' => 'primary',
+							'container' => 'nav',
+							'container_class' => 'navbar-collapse collapse',
+							'container_id' => 'navbar',
+							'menu_class' => 'nav navbar-nav navbar-right'
+
+							));
+
+						}
+						
 					?>
 
 				</div><!-- .container -->

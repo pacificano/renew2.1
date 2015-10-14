@@ -1,13 +1,13 @@
 $(function () {
 
-	$('#homeLink').on('click', function (e) {
+	$('.homeLink').on('click', function (e) {
 		e.preventDefault();
 		window.location.href = "#";
 	});
 
-	$('#servicesLink').on('click', function (e) {
+	$('.servicesLink').on('click', function (e) {
 		e.preventDefault();
-		window.location.href = "resources.html";
+		window.location.href = "../index.php#our-services";
 	});
 
 });
