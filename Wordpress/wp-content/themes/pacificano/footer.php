@@ -66,7 +66,6 @@ $github_address					= get_field('github_address', 70);
 	<!-- WINDOW HEIGHT FOR DIVS -->
     <script src="<?php bloginfo('template_directory'); ?>/assets/js/windowHeight.js"></script>
     <script src="<?php bloginfo('template_directory'); ?>/assets/js/main.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/assets/js/navigation.js"></script>
 
     <!-- MailChimp forms -->
     <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
