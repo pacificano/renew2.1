@@ -43,7 +43,7 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'pacificano' ); ?></a>
 
 	<!-- HEADER -->
-    <header class="site-header" role="banner" id="homeDiv">
+    <header class="site-header" role="banner" id="home">
 
     	<!-- NAVBAR -->
     	<div class="navbar-wrapper">
@@ -81,11 +81,35 @@
 
 							));
 
+						} elseif (is_home()) {
+							
+							wp_nav_menu( array(
+
+							'theme_location' => 'blog',
+							'container' => 'nav',
+							'container_class' => 'navbar-collapse collapse',
+							'container_id' => 'navbar',
+							'menu_class' => 'nav navbar-nav navbar-right'
+
+							));
+
+						} elseif (is_404()) {
+							
+							wp_nav_menu( array(
+
+							'theme_location' => 'errorMenu',
+							'container' => 'nav',
+							'container_class' => 'navbar-collapse collapse',
+							'container_id' => 'navbar',
+							'menu_class' => 'nav navbar-nav navbar-right'
+
+							));
+
 						} else {
 							
 							wp_nav_menu( array(
 
-							'theme_location' => 'primary',
+							'theme_location' => 'services',
 							'container' => 'nav',
 							'container_class' => 'navbar-collapse collapse',
 							'container_id' => 'navbar',
