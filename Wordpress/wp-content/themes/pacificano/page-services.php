@@ -10,7 +10,7 @@ $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
 <!-- FEATURE IMAGE -->
 <?php if ( has_post_thumbnail() ) { ?>
 
-	<section class="feature-image" style="background: url('<?php echo $thumbnail_url; ?>') no-repeat; background-size: cover;">
+	<section id="our-services" class="feature-image" style="background: url('<?php echo $thumbnail_url; ?>') no-repeat; background-size: cover;">
 	    <div class="container clearfix">
 	        <div class="row">
 	            <div class="col-md-8 white">
@@ -24,7 +24,7 @@ $thumbnail_url = wp_get_attachment_url( get_post_thumbnail_id( $post->ID) );
 
 <?php } else { ?>
 
-	<section class="feature-image feature-image-default">
+	<section id="our-services" class="feature-image feature-image-default">
 	    <div class="container clearfix">
 	        <div class="row">
 	            <div class="col-md-8 white">
