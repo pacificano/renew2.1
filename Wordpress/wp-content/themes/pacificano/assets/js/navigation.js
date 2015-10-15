@@ -7,7 +7,7 @@ $(function () {
 
 	$('.servicesLink').on('click', function (e) {
 		e.preventDefault();
-		window.location.href = "../index.php#our-services";
+		window.location.href = "/our-services/";
 	});
 
 });
