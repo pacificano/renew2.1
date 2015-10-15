@@ -9,50 +9,87 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+	<!-- FEATURE IMAGE -->
+	<section class="feature-image feature-image-default">
+	    <div class="container clearfix">
+	        <div class="row">
+	            <div class="col-sm-12 white">
 
-			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'pacificano' ); ?></h1>
-				</header><!-- .page-header -->
+	                <h1 class="dropShadow">Bummer! That page can't be found.</h1>
 
-				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'pacificano' ); ?></p>
+	            </div>
+	        </div>
+	    </div>
+	</section>
 
-					<?php get_search_form(); ?>
 
-					<?php the_widget( 'WP_Widget_Recent_Posts' ); ?>
 
-					<?php if ( pacificano_categorized_blog() ) : // Only show the widget if site has multiple categories. ?>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'pacificano' ); ?></h2>
-						<ul>
-						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
-						?>
-						</ul>
-					</div><!-- .widget -->
-					<?php endif; ?>
+	<!-- FIND CONTENT FOR USER -->
+	<div class="container">
+		<div id="primary" class="row">
+			<main id="content" class="col-sm-8">
+				<div class="error-404 not-found">
+					<div class="page-content">
+						<h2>No worries! Let's get you back on track.</h2>
 
-					<?php
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'pacificano' ), convert_smilies( ':)' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-					?>
+						<!-- Services -->
+						<p>Perhaps you were looking for a specific service?</p>
+						
+						<?php $loop = new WP_Query( array( 'post_type' => 'services_offered', 'orderby' => 'post_id', 'order' => 'ASC') ); ?>
 
-					<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+						<div class="resource-row clearfix">
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+		                	<?php while($loop->have_posts()) : $loop->the_post(); ?>
+		                	<?php 
+			                	$service_image = get_field('service_image');
+								$service_link = get_field('service_link');
+								$service_description = get_field('service_description'); 
+							?>
+			                    
+	                        <h3><a href="<?php echo $service_link; ?>"><?php the_title(); ?></a></h3>
+	                        <?php echo $service_description; ?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		                    <?php endwhile; wp_reset_query(); ?>
+		                    <br/><br/>
 
+		                </div><!-- resource-row clearfix -->
+
+						<!-- categories -->
+		                <h3>Categories</h3>
+		                <p>Or maybe a popular category?</p>
+
+		                <div class="widget widget_categories">
+		                	<h4 class="widget-title">Most Used Categories</h4>
+		                	<ul>
+		                		<?php wp_list_categories(array(
+		                			'orderby' => 'count',
+		                			'order' => 'DESC',
+		                			'show_count' => 1,
+		                			'title_li' => '',
+		                			'number' => 10
+		                		)); ?>
+		                	</ul>
+		                </div> <!-- widget -->
+
+		                <!-- archives -->
+		                <h3>Archives</h3>
+		                <p>You can always sort through our archives...</p>
+		                <?php the_widget('WP_Widget_Archives', 'title=Our Archives', 'before_title=<h4 class="widgettitle">&after_title=</h4>'); ?>
+
+						<p>...or just head back to the <a href="<?php echo esc_url(home_url('/')); ?>">home page</a></p>
+					</div><!-- content -->
+				</div>
+			</main>
+
+			<!-- sidebar -->
+			<aside class="col-sm-4">
+				<?php get_sidebar(); ?>
+			</aside>
+
+		</div>
+	</div>
+
+
+
+<?php get_template_part('content', 'whatWeDo'); ?>
 <?php get_footer(); ?>
