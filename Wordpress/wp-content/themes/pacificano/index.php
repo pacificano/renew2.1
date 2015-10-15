@@ -15,7 +15,7 @@
 get_header(); ?>
 
 	<!-- FEATURE IMAGE -->
-	<section class="feature-image feature-image-default-alt">
+	<section class="feature-image feature-image-default-alt" id="blog">
 	    <div class="container clearfix">
 	        <div class="row">
 	            
