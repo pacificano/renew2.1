@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div class="container">
+	<div class="container" id="blog">
 	    <div class="row" id="primaryPost">
 
 	        <main id="content" class="col-sm-9">
@@ -39,6 +39,11 @@ get_header(); ?>
 
 		</div><!-- primaryPost -->
 	</div><!-- container -->
+
+
+
+	<!-- modal -->
+	<?php get_template_part( 'template-parts/content-modal', 'none' ); ?>
 
 
 
