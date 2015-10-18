@@ -38,8 +38,8 @@ $mailing_list_text		= get_field('mailing_list_text');
 						<input type="email" value="" name="EMAIL" class="required email newsletterEmail" id="mce-EMAIL">
 
 						<div id="mce-responses" class="clear">
-							<div class="response" id="mce-error-response" style="display:none"></div>
-							<div class="response" id="mce-success-response" style="display:none"></div>
+							<div class="response" id="mce-error-response" style="display:none; margin-bottom: 20px; border: solid 2px #ddd; padding: 10px;"></div>
+							<div class="response" id="mce-success-response" style="display:none; margin-bottom: 20px; border: solid 2px #ddd; padding: 10px;">Almost finished... We need to confirm your email address. To complete the subscription process, please click the link in the email we just sent you.</div>
 						</div>   
 
 						<!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
