@@ -105,6 +105,18 @@
 
 							));
 
+						} elseif (is_single()) {
+							
+							wp_nav_menu( array(
+
+							'theme_location' => 'singlePage',
+							'container' => 'nav',
+							'container_class' => 'navbar-collapse collapse',
+							'container_id' => 'navbar',
+							'menu_class' => 'nav navbar-nav navbar-right'
+
+							));
+
 						} else {
 							
 							wp_nav_menu( array(
