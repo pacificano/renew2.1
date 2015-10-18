@@ -48,6 +48,7 @@ function pacificano_setup() {
 		'services' => esc_html__( 'Services Menu', 'pacificano' ),
 		'blog' => esc_html__( 'Blog Menu', 'pacificano' ),
 		'errorMenu' => esc_html__( '404 Menu', 'pacificano' ),
+		'singlePage' => esc_html__( 'Single Post Menu', 'pacificano' ),
 	) );
 
 	/*
