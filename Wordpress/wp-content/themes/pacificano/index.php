@@ -88,4 +88,9 @@ get_header(); ?>
 
 
 
+	<!-- modal -->
+	<?php get_template_part( 'template-parts/content-modal', 'none' ); ?>
+	
+
+
 <?php get_footer(); ?>
