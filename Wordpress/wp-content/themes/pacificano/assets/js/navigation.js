@@ -1,13 +1,8 @@
 $(function () {
 
-	$('.homeLink').on('click', function (e) {
+	$('.blogLink').on('click', function (e) {
 		e.preventDefault();
-		window.location.href = "#";
-	});
-
-	$('.servicesLink').on('click', function (e) {
-		e.preventDefault();
-		window.location.href = "/our-services/";
+		window.location.href = "http://www.pacificano.com/blog/";
 	});
 
 });
