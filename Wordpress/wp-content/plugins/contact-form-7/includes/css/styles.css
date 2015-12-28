@@ -4,8 +4,8 @@ div.wpcf7 {
 }
 
 div.wpcf7-response-output {
-	margin: 0;
-	padding: 0;
+	margin: 2em 0.5em 1em;
+	padding: 0.2em 1em;
 }
 
 div.wpcf7 .screen-reader-response {
@@ -35,7 +35,7 @@ div.wpcf7-validation-errors {
 	border: 2px solid #f7e700;
 }
 
-span.wpcf7-form-control-wrap {
+.wpcf7-form-control-wrap {
 	position: relative;
 }
 
@@ -45,7 +45,7 @@ span.wpcf7-not-valid-tip {
 	display: block;
 }
 
-.use-floating-validation-tip span.wpcf7-not-valid-tip { 
+.use-floating-validation-tip span.wpcf7-not-valid-tip {
 	position: absolute;
 	top: 20%;
 	left: 20%;
